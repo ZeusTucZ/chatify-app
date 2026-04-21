@@ -20,22 +20,22 @@ const MyForm = ({ activeChannel }) => {
     }
 
     return (
-        <div className="flex items-center gap-3">
+        <form onSubmit={handleClick} className="flex gap-2 sm:items-center sm:gap-3">
             <input 
                 type="text"
                 name="message"
                 value={message}
                 onChange={handleOnChange}
                 placeholder="Write a message..."
-                className="w-full rounded-xl border border-slate-300 px-4 py-3 text-sm outline-none focus:border-slate-400"
+                className="min-w-0 flex-1 rounded-lg border border-slate-300 px-4 py-3 text-sm outline-none focus:border-slate-400"
             />
                 <button
-                    onClick={handleClick}
-                    className="rounded-xl bg-slate-900 px-4 py-3 text-sm text-white"
+                    type="submit"
+                    className="shrink-0 rounded-lg bg-slate-900 px-4 py-3 text-sm text-white"
                 >
                     Send
                 </button>
-        </div>
+        </form>
     )
 }
 
